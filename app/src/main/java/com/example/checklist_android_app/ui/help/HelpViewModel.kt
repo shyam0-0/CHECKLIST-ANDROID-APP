@@ -11,3 +11,4 @@ class HelpViewModel : ViewModel() {
     }
     val text: LiveData<String> = _text
 }
+
