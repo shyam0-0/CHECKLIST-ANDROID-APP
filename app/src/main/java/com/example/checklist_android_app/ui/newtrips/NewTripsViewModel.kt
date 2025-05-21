@@ -1,14 +1,13 @@
-package com.example.checklist_android_app.ui.help
+package com.example.checklist_android_app.ui.newtrips
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HelpViewModel : ViewModel() {
+class NewTripsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Help section"
+        value = "This is New Trips section"
     }
     val text: LiveData<String> = _text
 }
-

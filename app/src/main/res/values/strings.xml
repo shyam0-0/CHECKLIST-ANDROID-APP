@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CHECKLIST-ANDROID-APP</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Travel Checklist</string>
+    <string name="nav_header_subtitle">Your Smart Packing Companion</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_newtrips">New Trips</string>
+    <string name="menu_mychecklists">My Checklists</string>
+    <string name="menu_savedtrips">Saved Trips</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_help">Help</string>
+</resources>
