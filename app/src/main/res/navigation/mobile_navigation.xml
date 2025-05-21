@@ -12,21 +12,33 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.checklist_android_app.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_newtrips"
+        android:name="com.example.checklist_android_app.ui.newtrips.NewTripsFragment"
+        android:label="@string/menu_newtrips"
+        tools:layout="@layout/fragment_newtrips" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.checklist_android_app.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_mychecklists"
+        android:name="com.example.checklist_android_app.ui.mychecklists.MyCheckListsFragment"
+        android:label="@string/menu_mychecklists"
+        tools:layout="@layout/fragment_my_checklists" />
+
+    <fragment
+        android:id="@+id/nav_savedtrips"
+        android:name="com.example.checklist_android_app.ui.savedtrips.SavedTripsFragment"
+        android:label="@string/menu_savedtrips"
+        tools:layout="@layout/fragment_saved_trips" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.checklist_android_app.ui.settings.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.example.checklist_android_app.ui.help.HelpFragment"
+        android:label="@string/menu_help"
+        tools:layout="@layout/fragment_help" />
         
 </navigation>
