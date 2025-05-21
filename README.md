@@ -18,3 +18,11 @@ In Navigation Bar TO Add New Elements :
         tools:layout="@layout/fragment_settings" />
 6. res/values in string.xml add this
 <string name="menu_settings">Settings</string>
+7. Finally connect it to mainactivy in the following part:
+
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_settings
+            ), drawerLayout
+        )
+add the required navigator name in the format of R.id.nav_nameoftheicon.
