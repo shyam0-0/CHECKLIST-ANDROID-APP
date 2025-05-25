@@ -8,25 +8,92 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.checklist_android_app.databinding.FragmentSettingsBinding
+import com.google.android.material.snackbar.Snackbar
 
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
+    private lateinit var viewModel: SettingsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
+        viewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textSettings
-        settingsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupObservers()
+        setupListeners()
+    }
+
+    private fun setupObservers() {
+        viewModel.notifications.observe(viewLifecycleOwner) { isEnabled ->
+            binding.switchNotifications.isChecked = isEnabled
         }
-        return root
+
+        viewModel.locationServices.observe(viewLifecycleOwner) { isEnabled ->
+            binding.switchLocation.isChecked = isEnabled
+        }
+
+        viewModel.autoBackup.observe(viewLifecycleOwner) { isEnabled ->
+            binding.switchAutoBackup.isChecked = isEnabled
+        }
+
+        viewModel.dataSync.observe(viewLifecycleOwner) { isEnabled ->
+            binding.switchDataSync.isChecked = isEnabled
+        }
+
+        viewModel.isDarkTheme.observe(viewLifecycleOwner) { isEnabled ->
+            binding.switchDarkTheme.isChecked = isEnabled
+        }
+    }
+
+    private fun setupListeners() {
+        binding.switchNotifications.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setNotifications(isChecked)
+        }
+
+        binding.switchLocation.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setLocationServices(isChecked)
+        }
+
+        binding.switchAutoBackup.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setAutoBackup(isChecked)
+        }
+
+        binding.switchDataSync.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setDataSync(isChecked)
+        }
+
+        binding.switchDarkTheme.setOnCheckedChangeListener { _, isChecked ->
+            viewModel.setDarkTheme(isChecked)
+        }
+
+        binding.buttonUpgrade.setOnClickListener {
+            showSnackbar("Premium features coming soon!")
+        }
+
+        binding.buttonExportData.setOnClickListener {
+            showSnackbar("Export functionality coming soon!")
+        }
+
+        binding.buttonDeleteAccount.setOnClickListener {
+            showSnackbar("Account deletion coming soon!")
+        }
+
+        binding.buttonSaveSettings.setOnClickListener {
+            viewModel.saveSettings()
+            showSnackbar("Settings saved successfully!")
+        }
+    }
+
+    private fun showSnackbar(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {
