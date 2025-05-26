@@ -12,10 +12,10 @@
             android:id="@+id/nav_newtrips"
             android:icon="@drawable/ic_menu_newtrips"
             android:title="@string/menu_newtrips" />
-        <item
+        <!-- <item
             android:id="@+id/nav_mychecklists"
             android:icon="@drawable/ic_menu_mychecklists"
-            android:title="@string/menu_mychecklists" />
+            android:title="@string/menu_mychecklists" /> -->
 
         <item
             android:id="@+id/nav_savedtrips"

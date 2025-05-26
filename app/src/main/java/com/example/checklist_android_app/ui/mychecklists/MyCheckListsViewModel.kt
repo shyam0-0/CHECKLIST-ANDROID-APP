@@ -1,4 +1,4 @@
-package com.example.checklist_android_app.ui.mychecklists
+/*package com.example.checklist_android_app.ui.mychecklists
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,4 +10,4 @@ class MyCheckListsViewModel : ViewModel() {
         value = "My Checklists"
     }
     val text: LiveData<String> = _text
-}
+}*/

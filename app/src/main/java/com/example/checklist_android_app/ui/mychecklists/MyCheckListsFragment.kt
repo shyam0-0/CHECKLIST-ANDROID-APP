@@ -1,4 +1,4 @@
-package com.example.checklist_android_app.ui.mychecklists
+/*package com.example.checklist_android_app.ui.mychecklists
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,4 +36,4 @@ class MyCheckListsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} // Added closing brace
+} // Added closing brace*/
