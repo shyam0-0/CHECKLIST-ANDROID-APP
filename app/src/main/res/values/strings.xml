@@ -29,6 +29,9 @@
     <string name="contact_message_hint">Message</string>
     <string name="message_sent">Message sent successfully</string>
     <string name="message_error">Error sending message. Please try again.</string>
+
+    <string name="menu_emptylist">Empty List</string>
+
     <!-- FAQ Section -->
     <string name="faq_title">Frequently Asked Questions</string>
     <string name="faq_empty">No FAQs available</string>

@@ -18,6 +18,11 @@
             android:title="@string/menu_mychecklists" /> -->
 
         <item
+            android:id="@+id/nav_emptylist"
+            android:icon="@drawable/ic_menu_emptylist"
+            android:title="@string/menu_emptylist" />
+
+        <item
             android:id="@+id/nav_savedtrips"
             android:icon="@drawable/ic_menu_savedtrips"
             android:title="@string/menu_savedtrips" />

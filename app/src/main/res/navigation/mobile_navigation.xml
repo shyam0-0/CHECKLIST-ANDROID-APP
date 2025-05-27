@@ -34,6 +34,12 @@
         tools:layout="@layout/fragment_my_checklists" /> -->
 
     <fragment
+        android:id="@+id/nav_emptylist"
+        android:name="com.example.checklist_android_app.ui.emptylist.EmptyListFragment"
+        android:label="@string/menu_emptylist"
+        tools:layout="@layout/fragment_emptylist" />
+
+    <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.checklist_android_app.ui.settings.SettingsFragment"
         android:label="@string/menu_settings"
