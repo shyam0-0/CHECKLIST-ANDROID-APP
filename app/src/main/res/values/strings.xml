@@ -9,6 +9,12 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_newtrips">New Trips</string>
+    <string name="new_trip_title">Trip Details</string>
+    <string name="step_format">Step %1$d/3</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_next">Next</string>
+    <string name="button_generate">Generate Checklist</string>
+    <string name="select_dates">Select Travel Dates</string>
     <!-- <string name="menu_mychecklists">My Checklists</string> -->
     <string name="menu_savedtrips">Saved Trips</string>
     <string name="search_trips_hint">Search saved trips...</string>
